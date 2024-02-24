@@ -8,13 +8,13 @@ CRGB leds[NUM_LEDS];
 void setup() { FastLED.addLeds<NEOPIXEL, 6>(leds, NUM_LEDS); }
 void loop() {
         for(int dot = 0; dot < NUM_LEDS; dot++) {
-            leds[dot] = CRGB::Red;
+            leds[dot] = CRGB::Blue;
             FastLED.show();
             decay(leds);
             delay(DELAY);
         }
         for(int dot = NUM_LEDS-1; dot >=0; dot--) {
-            leds[dot] = CRGB::Red;
+            leds[dot] = CRGB::Blue;
             FastLED.show();
             decay(leds);
             delay(DELAY);
