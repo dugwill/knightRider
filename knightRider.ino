@@ -1,6 +1,6 @@
 #include <FastLED.h>
 #define NUM_LEDS 6
-#define DECAY_VALUE 200  // higher is faster
+#define DECAY_VALUE 150  // higher is faster
 #define DELAY 140  //higher is slower
 
 
@@ -24,4 +24,5 @@ void loop() {
 
 void decay(CRGB leds[NUM_LEDS]){
     fadeToBlackBy(leds,NUM_LEDS,DECAY_VALUE);
+    FastLED.show();
 }
